@@ -1,0 +1,14 @@
+#app {
+
+}
+.clock {
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    .inner {
+        height: inherit;
+        width: inherit;
+        background-color: white;
+        border-radius: 50%;
+    }
+}

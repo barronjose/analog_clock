@@ -1,0 +1,9 @@
+.clock {
+  width: 400px;
+  height: 400px;
+  background-color: gray; }
+  .clock .inner {
+    height: inherit;
+    width: inherit;
+    background-color: white;
+    border-radius: 50%; }
