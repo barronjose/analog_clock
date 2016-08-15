@@ -1,9 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .clock {
-  width: 400px;
-  height: 400px;
-  background-color: gray; }
-  .clock .inner {
-    height: inherit;
-    width: inherit;
-    background-color: white;
-    border-radius: 50%; }
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; }
+  .clock .inner-face, .clock .outer-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .clock .inner-face {
+    z-index: 1; }
+    .clock .inner-face .minute-marker {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 120px;
+      margin-top: -120px;
+      transform-origin: bottom; }
+      .clock .inner-face .minute-marker:before, .clock .inner-face .minute-marker:after {
+        content: "";
+        display: block;
+        position: absolute;
+        box-sizing: border-box; }
+    .clock .inner-face .minute-marker:before {
+      top: 0;
+      width: 2px;
+      height: 7px;
+      background: #000; }
+    .clock .inner-face .minute-marker:nth-child(1) {
+      transform: rotate(6deg); }
+    .clock .inner-face .minute-marker:nth-child(5):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(2) {
+      transform: rotate(12deg); }
+    .clock .inner-face .minute-marker:nth-child(10):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(3) {
+      transform: rotate(18deg); }
+    .clock .inner-face .minute-marker:nth-child(15):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(4) {
+      transform: rotate(24deg); }
+    .clock .inner-face .minute-marker:nth-child(20):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(5) {
+      transform: rotate(30deg); }
+    .clock .inner-face .minute-marker:nth-child(25):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(6) {
+      transform: rotate(36deg); }
+    .clock .inner-face .minute-marker:nth-child(30):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(7) {
+      transform: rotate(42deg); }
+    .clock .inner-face .minute-marker:nth-child(35):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(8) {
+      transform: rotate(48deg); }
+    .clock .inner-face .minute-marker:nth-child(40):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(9) {
+      transform: rotate(54deg); }
+    .clock .inner-face .minute-marker:nth-child(45):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(10) {
+      transform: rotate(60deg); }
+    .clock .inner-face .minute-marker:nth-child(50):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(11) {
+      transform: rotate(66deg); }
+    .clock .inner-face .minute-marker:nth-child(55):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(12) {
+      transform: rotate(72deg); }
+    .clock .inner-face .minute-marker:nth-child(60):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(13) {
+      transform: rotate(78deg); }
+    .clock .inner-face .minute-marker:nth-child(65):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(14) {
+      transform: rotate(84deg); }
+    .clock .inner-face .minute-marker:nth-child(70):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(15) {
+      transform: rotate(90deg); }
+    .clock .inner-face .minute-marker:nth-child(75):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(16) {
+      transform: rotate(96deg); }
+    .clock .inner-face .minute-marker:nth-child(80):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(17) {
+      transform: rotate(102deg); }
+    .clock .inner-face .minute-marker:nth-child(85):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(18) {
+      transform: rotate(108deg); }
+    .clock .inner-face .minute-marker:nth-child(90):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(19) {
+      transform: rotate(114deg); }
+    .clock .inner-face .minute-marker:nth-child(95):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(20) {
+      transform: rotate(120deg); }
+    .clock .inner-face .minute-marker:nth-child(100):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(21) {
+      transform: rotate(126deg); }
+    .clock .inner-face .minute-marker:nth-child(105):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(22) {
+      transform: rotate(132deg); }
+    .clock .inner-face .minute-marker:nth-child(110):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(23) {
+      transform: rotate(138deg); }
+    .clock .inner-face .minute-marker:nth-child(115):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(24) {
+      transform: rotate(144deg); }
+    .clock .inner-face .minute-marker:nth-child(120):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(25) {
+      transform: rotate(150deg); }
+    .clock .inner-face .minute-marker:nth-child(125):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(26) {
+      transform: rotate(156deg); }
+    .clock .inner-face .minute-marker:nth-child(130):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(27) {
+      transform: rotate(162deg); }
+    .clock .inner-face .minute-marker:nth-child(135):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(28) {
+      transform: rotate(168deg); }
+    .clock .inner-face .minute-marker:nth-child(140):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(29) {
+      transform: rotate(174deg); }
+    .clock .inner-face .minute-marker:nth-child(145):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(30) {
+      transform: rotate(180deg); }
+    .clock .inner-face .minute-marker:nth-child(150):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(31) {
+      transform: rotate(186deg); }
+    .clock .inner-face .minute-marker:nth-child(155):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(32) {
+      transform: rotate(192deg); }
+    .clock .inner-face .minute-marker:nth-child(160):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(33) {
+      transform: rotate(198deg); }
+    .clock .inner-face .minute-marker:nth-child(165):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(34) {
+      transform: rotate(204deg); }
+    .clock .inner-face .minute-marker:nth-child(170):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(35) {
+      transform: rotate(210deg); }
+    .clock .inner-face .minute-marker:nth-child(175):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(36) {
+      transform: rotate(216deg); }
+    .clock .inner-face .minute-marker:nth-child(180):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(37) {
+      transform: rotate(222deg); }
+    .clock .inner-face .minute-marker:nth-child(185):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(38) {
+      transform: rotate(228deg); }
+    .clock .inner-face .minute-marker:nth-child(190):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(39) {
+      transform: rotate(234deg); }
+    .clock .inner-face .minute-marker:nth-child(195):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(40) {
+      transform: rotate(240deg); }
+    .clock .inner-face .minute-marker:nth-child(200):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(41) {
+      transform: rotate(246deg); }
+    .clock .inner-face .minute-marker:nth-child(205):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(42) {
+      transform: rotate(252deg); }
+    .clock .inner-face .minute-marker:nth-child(210):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(43) {
+      transform: rotate(258deg); }
+    .clock .inner-face .minute-marker:nth-child(215):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(44) {
+      transform: rotate(264deg); }
+    .clock .inner-face .minute-marker:nth-child(220):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(45) {
+      transform: rotate(270deg); }
+    .clock .inner-face .minute-marker:nth-child(225):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(46) {
+      transform: rotate(276deg); }
+    .clock .inner-face .minute-marker:nth-child(230):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(47) {
+      transform: rotate(282deg); }
+    .clock .inner-face .minute-marker:nth-child(235):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(48) {
+      transform: rotate(288deg); }
+    .clock .inner-face .minute-marker:nth-child(240):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(49) {
+      transform: rotate(294deg); }
+    .clock .inner-face .minute-marker:nth-child(245):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(50) {
+      transform: rotate(300deg); }
+    .clock .inner-face .minute-marker:nth-child(250):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(51) {
+      transform: rotate(306deg); }
+    .clock .inner-face .minute-marker:nth-child(255):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(52) {
+      transform: rotate(312deg); }
+    .clock .inner-face .minute-marker:nth-child(260):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(53) {
+      transform: rotate(318deg); }
+    .clock .inner-face .minute-marker:nth-child(265):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(54) {
+      transform: rotate(324deg); }
+    .clock .inner-face .minute-marker:nth-child(270):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(55) {
+      transform: rotate(330deg); }
+    .clock .inner-face .minute-marker:nth-child(275):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(56) {
+      transform: rotate(336deg); }
+    .clock .inner-face .minute-marker:nth-child(280):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(57) {
+      transform: rotate(342deg); }
+    .clock .inner-face .minute-marker:nth-child(285):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(58) {
+      transform: rotate(348deg); }
+    .clock .inner-face .minute-marker:nth-child(290):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(59) {
+      transform: rotate(354deg); }
+    .clock .inner-face .minute-marker:nth-child(295):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+    .clock .inner-face .minute-marker:nth-child(60) {
+      transform: rotate(360deg); }
+    .clock .inner-face .minute-marker:nth-child(300):before {
+      width: 6px;
+      height: 20px;
+      margin-left: -2px; }
+  .clock .outer-face {
+    z-index: 2; }
+    .clock .outer-face .seconds {
+      background: red;
+      width: 1.5%;
+      height: 42%;
+      position: absolute;
+      left: 49.25%;
+      top: 20%;
+      -webkit-transform-origin: 50% 71%;
+      transform-origin: 50% 71%;
+      z-index: 8; }
+      .clock .outer-face .seconds:before {
+        background: red;
+        border-radius: 50%;
+        content: "";
+        position: absolute;
+        top: -9%;
+        left: -200%;
+        height: 18%;
+        width: 500%; }
+    .clock .outer-face .minutes {
+      background: #000;
+      width: 3.5%;
+      height: 55%;
+      position: absolute;
+      left: 48.25%;
+      top: 7%;
+      -webkit-transform-origin: 50% 78.5%;
+      transform-origin: 50% 78.5%; }
+    .clock .outer-face .hours {
+      background: #000;
+      width: 3.5%;
+      height: 40%;
+      position: absolute;
+      left: 48.25%;
+      top: 22%;
+      -webkit-transform-origin: 50% 71%;
+      transform-origin: 50% 71%; }

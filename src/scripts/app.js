@@ -13,7 +13,10 @@
         getTime();
 
         function getTime() {
-            let date = new Date();
+            let date = new Date;
+            let seconds = date.getSeconds();
+            let minutes = date.getMinutes();
+            let hours = date.getHours();
         }
 
 
