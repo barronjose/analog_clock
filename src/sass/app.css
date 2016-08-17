@@ -396,6 +396,12 @@
   .clock .outer-face {
     z-index: 2; }
     .clock .outer-face .seconds {
+      -moz-transition: all 1s linear;
+      -webkit-transition: all 1s linear;
+      -o-transition: all 1s linear;
+      transition: all 1s linear; }
+    .clock .outer-face .seconds {
+      z-index: 5;
       background: red;
       width: 1.5%;
       height: 42%;
@@ -415,20 +421,22 @@
         height: 18%;
         width: 500%; }
     .clock .outer-face .minutes {
+      z-index: 4;
       background: #000;
-      width: 3.5%;
+      width: 5%;
       height: 55%;
       position: absolute;
-      left: 48.25%;
+      left: 47.5%;
       top: 7%;
       -webkit-transform-origin: 50% 78.5%;
       transform-origin: 50% 78.5%; }
     .clock .outer-face .hours {
+      z-index: 3;
       background: #000;
-      width: 3.5%;
+      width: 5%;
       height: 40%;
       position: absolute;
-      left: 48.25%;
+      left: 47.5%;
       top: 22%;
       -webkit-transform-origin: 50% 71%;
       transform-origin: 50% 71%; }
