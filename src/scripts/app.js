@@ -1,3 +1,4 @@
+// Immediately Invoked Function Expression
 (function(callback) {
 
     callback(jQuery, window, document);
@@ -17,19 +18,41 @@
                                       window.msRequestAnimationFrame ||
                                       (callback => setInterval(callback, 1000));
 
+        /**
+           * @description Rotate element to an especific value
+           * @function rotateElement
+           * @param {String} element
+           * @param {Integer} value
+         */
         function rotateElement(element, value) {
             let trans = `rotate(${value}deg)`;
             $(`.${element}`).css({ 'transform': trans, '-moz-transform': trans, '-o-transform': trans, '-webkit-transform': trans });
         }
 
+        /**
+           * @description Replace value for an specific element
+           * @function replaceValue
+           * @param {String} element
+           * @param {String} value
+         */
         function replaceValue(element, value) {
             $(`.${element}`).find('span').html(value);
         }
 
+        /**
+           * @description Prepend a Zero to integer if less than 10
+           * @function prependZero
+           * @param {Integer} value
+           * @return {String} with a prepend zero
+         */
         function prependZero(value) {
             return value < 10 ? '0' + value: value;
         }
 
+        /**
+           * @description Clock Class definition
+           * @class Clock
+         */
         class Clock {
             constructor() {
                 this.date;

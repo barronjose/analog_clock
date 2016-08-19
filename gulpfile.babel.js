@@ -37,13 +37,13 @@ import runSequence from 'run-sequence';
         return del.sync('dist');
     });
 
-    gulp.task('build', (callback) => {
+    gulp.task('build', callback => {
         runSequence('clean:dist',
             ['sass', 'useref'],
             callback);
     });
 
-    gulp.task('default',(callback) => {
+    gulp.task('default',callback => {
         runSequence(['sass','browserSync', 'watch'],
             callback
         );
