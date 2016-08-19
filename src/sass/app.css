@@ -3,9 +3,17 @@
   padding: 0;
   box-sizing: border-box; }
 
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin: 15px 0; }
+
 #main-container {
   width: 1024px;
   margin: 0 auto; }
+
+#clocks {
+  margin-top: 100px; }
 
 .digital-container, .analog-container {
   width: 50%;
@@ -16,10 +24,6 @@
 .digital-container {
   text-align: center;
   margin-top: 100px; }
-
-h1 {
-  text-align: center;
-  margin: 15px 0; }
 
 .analog-clock {
   margin: 0 auto;
@@ -519,6 +523,7 @@ h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 24pt; }
   .digital-clock .dig-hours, .digital-clock .dig-minutes, .digital-clock .dig-seconds, .digital-clock .dig-meridiem {
-    display: inline-block; }
-  .digital-clock .dig-hours span:after, .digital-clock .dig-minutes span:after {
+    display: inline-block;
+    width: 60px; }
+  .digital-clock .dig-hours:after, .digital-clock .dig-minutes:after {
     content: ':'; }

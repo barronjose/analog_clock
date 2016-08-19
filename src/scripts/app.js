@@ -36,7 +36,7 @@
            * @param {String} value
          */
         function replaceValue(element, value) {
-            $(`.${element}`).find('span').html(value);
+            $(`.${element}`).html(value);
         }
 
         /**

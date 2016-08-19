@@ -1,6 +1,16 @@
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: 15px 0;
+}
+
 #main-container {
     width: 1024px;
     margin: 0 auto;
+}
+
+#clocks {
+    margin-top: 100px;
 }
 
 .digital-container, .analog-container {
@@ -13,9 +23,4 @@
 .digital-container {
     text-align: center;
     margin-top: 100px;
-}
-
-h1 {
-    text-align: center;
-    margin: 15px 0;
 }

@@ -100,8 +100,9 @@
     font-size: 24pt;
     .dig-hours, .dig-minutes, .dig-seconds, .dig-meridiem {
         display: inline-block;
+        width: 60px;
     }
-    .dig-hours span:after, .dig-minutes span:after {
+    .dig-hours:after, .dig-minutes:after {
         content: ':';
     }
 }
