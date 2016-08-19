@@ -513,3 +513,7 @@ h1 {
 
 .digital-clock {
   margin: 0 auto; }
+  .digital-clock .dig-hours, .digital-clock .dig-minutes, .digital-clock .dig-seconds, .digital-clock .dig-meridian {
+    display: inline-block; }
+  .digital-clock .dig-hours span:after, .digital-clock .dig-minutes span:after {
+    content: ':'; }

@@ -14,12 +14,11 @@
     .inner-face {
         z-index: 1;
         .minute-marker {
-            $size: 120px;
             position: absolute;
             top: 50%;
             left: 50%;
-            height: $size;
-            margin-top: -($size);
+            height: 120px;
+            margin-top: -120px;
             transform-origin: bottom;
             &:before, &:after {
                 content: "";
@@ -98,4 +97,10 @@
 
 .digital-clock {
     margin: 0 auto;
+    .dig-hours, .dig-minutes, .dig-seconds, .dig-meridian {
+        display: inline-block;
+    }
+    .dig-hours span:after, .dig-minutes span:after {
+        content: ':';
+    }
 }

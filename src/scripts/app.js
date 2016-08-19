@@ -12,13 +12,31 @@
         });
 
         const requestAnimationFrame = window.requestAnimationFrame ||
-                                    window.mozRequestAnimationFrame ||
-                                    window.webkitRequestAnimationFrame ||
-                                    window.msRequestAnimationFrame ||
-                                    function(callback) { return setTimeout(callback, 1000/60) };
+                                      window.mozRequestAnimationFrame ||
+                                      window.webkitRequestAnimationFrame ||
+                                      window.msRequestAnimationFrame ||
+                                      (callback => setInterval(callback, 1000));
+
+        function rotateElement(element, value) {
+            let trans = `rotate(${value}deg)`;
+            $(`.${element}`).css({ 'transform': trans, '-moz-transform': trans, '-o-transform': trans, '-webkit-transform': trans });
+        }
+
+        function replaceValue(element, value) {
+            $(`.${element}`).find('span').html(value);
+        }
+
+        function prependZero(value) {
+            return value < 10 ? '0' + value: value;
+        }
 
         class Clock {
             constructor() {
+                this.date;
+                this.seconds;
+                this.minutes;
+                this.hours;
+                this.meridian;
                 this.updateTime();
             }
 
@@ -41,16 +59,17 @@
                 this.seconds = this.date.getSeconds();
                 this.minutes = this.date.getMinutes();
                 this.hours = ((this.date.getHours() + 11) % 12 + 1);
+                this.meridian = this.date.getHours() >= 12 ? 'PM': 'AM';
 
                 rotateElement('hours', this.getHoursPosition());
                 rotateElement('minutes', this.getMinutesPosition());
                 rotateElement('seconds', this.getSecondsPosition());
-            }
-        }
 
-        function rotateElement(element, value) {
-            let trans = `rotate(${value}deg)`;
-            $(`.${element}`).css({ 'transform': trans, '-moz-transform': trans, '-o-transform': trans, '-webkit-transform': trans });
+                replaceValue('dig-hours', prependZero(this.hours));
+                replaceValue('dig-minutes', prependZero(this.minutes));
+                replaceValue('dig-seconds', prependZero(this.seconds));
+                replaceValue('dig-meridian', this.meridian);
+            }
         }
 
     })
