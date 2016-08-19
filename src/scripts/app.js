@@ -11,9 +11,15 @@
             new Clock;
         });
 
+        const requestAnimationFrame = window.requestAnimationFrame ||
+                                    window.mozRequestAnimationFrame ||
+                                    window.webkitRequestAnimationFrame ||
+                                    window.msRequestAnimationFrame ||
+                                    function(callback) { return setTimeout(callback, 1000/60) };
+
         class Clock {
             constructor() {
-                setInterval(() => this.updateTime(), 1000);
+                this.updateTime();
             }
 
             getHoursPosition() {
@@ -25,10 +31,12 @@
             }
 
             getSecondsPosition() {
-                return Math.floor(6 * this.seconds);
+                return this.seconds === 0 ? 360: Math.floor(6 * this.seconds);
             }
 
             updateTime() {
+                requestAnimationFrame(() => this.updateTime());
+
                 this.date = new Date;
                 this.seconds = this.date.getSeconds();
                 this.minutes = this.date.getMinutes();
