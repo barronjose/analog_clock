@@ -96,8 +96,9 @@
 }
 
 .digital-clock {
-    margin: 0 auto;
-    .dig-hours, .dig-minutes, .dig-seconds, .dig-meridian {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24pt;
+    .dig-hours, .dig-minutes, .dig-seconds, .dig-meridiem {
         display: inline-block;
     }
     .dig-hours span:after, .dig-minutes span:after {

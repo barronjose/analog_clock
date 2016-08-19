@@ -91,7 +91,7 @@
                 replaceValue('dig-hours', prependZero(this.hours));
                 replaceValue('dig-minutes', prependZero(this.minutes));
                 replaceValue('dig-seconds', prependZero(this.seconds));
-                replaceValue('dig-meridian', this.meridian);
+                replaceValue('dig-meridiem', this.meridian);
             }
         }
 

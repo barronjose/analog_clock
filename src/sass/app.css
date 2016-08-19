@@ -13,6 +13,10 @@
   float: left;
   margin: 15px 0; }
 
+.digital-container {
+  text-align: center;
+  margin-top: 100px; }
+
 h1 {
   text-align: center;
   margin: 15px 0; }
@@ -512,8 +516,9 @@ h1 {
       transform-origin: 50% 71%; }
 
 .digital-clock {
-  margin: 0 auto; }
-  .digital-clock .dig-hours, .digital-clock .dig-minutes, .digital-clock .dig-seconds, .digital-clock .dig-meridian {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24pt; }
+  .digital-clock .dig-hours, .digital-clock .dig-minutes, .digital-clock .dig-seconds, .digital-clock .dig-meridiem {
     display: inline-block; }
   .digital-clock .dig-hours span:after, .digital-clock .dig-minutes span:after {
     content: ':'; }
