@@ -55,11 +55,6 @@
          */
         class Clock {
             constructor() {
-                this.date;
-                this.seconds;
-                this.minutes;
-                this.hours;
-                this.meridian;
                 this.updateTime();
             }
 
